@@ -4,20 +4,18 @@ function Organization( {onFilterGreased, greaseFilter, setGreaseFilter} ) {
     
     // const [greaseFilter, setGreaseFilter] = useState('False')
 
-    function handleClick() {
-        //debugger;
-        console.log('filter')
-        setGreaseFilter(!greaseFilter)
-        onFilterGreased()
-    }
+    // function handleClick() {
+    //     // setGreaseFilter(!greaseFilter)  --- move to App
+    //     onFilterGreased()
+    // }
 
     
     return (
         <>
             <button
-            onClick={handleClick}
+            onClick={onFilterGreased}
             >
-                {greaseFilter? 'Show Only Greased Hogs' : 'Show All Hogs'}
+                {greaseFilter? 'Show All Hogs' : 'Show Only Greased Hogs' }
             </button>
             <br/>
             <br/>

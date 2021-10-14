@@ -10,21 +10,17 @@ function App() {
 	const [hogTiles, setHogtiles] = useState(hogs)
     
 	const [greaseFilter, setGreaseFilter] = useState(false)
-
-	let hogsToDisplay = [...hogTiles]
 	
 	function onFilterGreased() {
-		
-		if (greaseFilter) {
-			hogsToDisplay = hogsToDisplay.filter(hog => hog.greased === true)
-			setHogtiles(hogsToDisplay)
-		}
-		else {
-			setHogtiles(hogs)
-		}
+		setGreaseFilter(!greaseFilter)
 		//debugger;
-		
 	}
+
+	const hogsToDisplay = hogTiles.filter((hog) => {
+		if (!greaseFilter) return true;
+
+		return hog.greased === true;
+	})
 
 	return (
 		<div className="App">
@@ -36,7 +32,7 @@ function App() {
 			/>
 	
 			<HogTiles 
-			hogs={hogTiles}
+			hogs={hogsToDisplay}
 			/>
 		</div>
 	);
