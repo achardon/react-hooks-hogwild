@@ -10,7 +10,6 @@ function Tile( {hog} ) {
 
     function handleClick() {
         setIsClicked(!isClicked)
-        
     }
 
     return (
@@ -27,7 +26,7 @@ function Tile( {hog} ) {
             {!isClicked ?
             <Details 
             specialty={specialty}
-            weight={weight}
+            weight={weight} 
             greased={greased}
             medal={hog['highest medal achieved']}
             />
