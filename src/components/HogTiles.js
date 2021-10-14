@@ -3,7 +3,7 @@ import Tile from './Tile';
 
 function HogTiles( {hogs} ) {
 
-    console.log(hogs)
+    //console.log(hogs)
 
     return(
         <div

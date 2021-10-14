@@ -1,14 +1,6 @@
-import React, { useCallback, useState } from 'react';
+import React from 'react';
 
-function Organization( {onFilterGreased, greaseFilter, setGreaseFilter} ) {
-    
-    // const [greaseFilter, setGreaseFilter] = useState('False')
-
-    // function handleClick() {
-    //     // setGreaseFilter(!greaseFilter)  --- move to App
-    //     onFilterGreased()
-    // }
-
+function Organization( {onFilterGreased, greaseFilter, onSortByName} ) {
     
     return (
         <>
@@ -16,6 +8,17 @@ function Organization( {onFilterGreased, greaseFilter, setGreaseFilter} ) {
             onClick={onFilterGreased}
             >
                 {greaseFilter? 'Show All Hogs' : 'Show Only Greased Hogs' }
+            </button>
+            <br/>
+            <br/>
+            <button
+            onClick={onSortByName}
+            >
+                Sort by Name
+            </button>
+            -------
+            <button>
+                Sort by Weight
             </button>
             <br/>
             <br/>

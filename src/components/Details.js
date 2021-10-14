@@ -6,7 +6,7 @@ function Details ( {specialty, weight, greased, medal }) {
             <p>
                 Specialty: {specialty}
                 <br/>
-                Weight: {weight}
+                Weight: {weight} pounds
                 <br/>
                 Greased: {greased? 'Yes' : 'No'}
                 <br/>
