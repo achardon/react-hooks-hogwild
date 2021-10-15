@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Organization( {onFilterGreased, greaseFilter, onSortByName} ) {
+function Organization( {onFilterGreased, greaseFilter, sortByName, onSortByName, sortByWeight, onSortByWeight} ) {
     
     return (
         <>
@@ -12,11 +12,12 @@ function Organization( {onFilterGreased, greaseFilter, onSortByName} ) {
             <br/>
             <button
             onClick={onSortByName}
-            >Sort by Name
+            >Sort by Name - {sortByName? <em>On</em> : <em>Off</em>}
             </button>
             -------
-            <button>
-                Sort by Weight
+            <button
+            onClick={onSortByWeight}
+            >Sort by Weight - {sortByWeight? <em>On</em> : <em>Off</em>}
             </button>
             <br/>
             <br/>
